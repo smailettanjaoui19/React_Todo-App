@@ -1,31 +1,25 @@
-import { useState } from "react";
+import { useEffect, useRef } from "react";
+import useTodoForm from "./useTodoForm";
 
 // EditModal Component
-export const EditModal = ({ todo, isOpen, onClose, onEditTodo }) => {
-  const [info, setInfo] = useState({
-    title: todo?.title,
-    dueDate: todo?.dueDate,
-    priority: todo?.priority,
-  });
+export const EditModal = ({
+  todo: editingTodo,
+  isOpen,
+  onClose,
+  onEditTodo,
+}) => {
+  const input = useRef();
+  const { todo, handleChange, handleSubmit } = useTodoForm(
+    onEditTodo,
+    editingTodo
+  );
+
+  useEffect(() => {
+    input.current.focus();
+    input.current.select();
+  }, []);
 
   if (!isOpen) return null;
-  const handleChange = (event) => {
-    setInfo((p) => ({
-      ...p,
-      [event.target.name]: event.target.value,
-    }));
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    if (!info.title || !info.dueDate) return;
-    // if (new Date() > new Date(info.dueDate)) return;
-    console.log('sumbited')
-    onEditTodo({
-      ...todo,
-      ...info,
-    });
-  };
   return (
     <div className="modal-overlay">
       <div className="modal">
@@ -40,11 +34,12 @@ export const EditModal = ({ todo, isOpen, onClose, onEditTodo }) => {
           <div className="form-group">
             <label htmlFor="edit-task-title">Task</label>
             <input
-            name="title"
+              ref={input}
+              value={todo.title}
+              name="title"
               onChange={handleChange}
               type="text"
               id="edit-task-title"
-              defaultValue={todo?.title || ""}
               placeholder="What needs to be done?"
             />
           </div>
@@ -53,10 +48,10 @@ export const EditModal = ({ todo, isOpen, onClose, onEditTodo }) => {
             <div className="form-group">
               <label htmlFor="edit-task-priority">Priority</label>
               <select
-              name="priority"
+                value={todo.priority}
+                name="priority"
                 onChange={handleChange}
                 id="edit-task-priority"
-                defaultValue={todo?.priority || "medium"}
               >
                 <option value="low">Low</option>
                 <option value="medium">Medium</option>
@@ -67,11 +62,11 @@ export const EditModal = ({ todo, isOpen, onClose, onEditTodo }) => {
             <div className="form-group">
               <label htmlFor="edit-task-due-date">Due Date</label>
               <input
-              name="dueDate"
+                value={todo.dueDate}
+                name="dueDate"
                 type="date"
                 onChange={handleChange}
                 id="edit-task-due-date"
-                defaultValue={todo?.dueDate || ""}
               />
             </div>
           </div>

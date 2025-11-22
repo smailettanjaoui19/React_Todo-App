@@ -454,3 +454,63 @@ select {
     padding: 0;
   }
 }
+
+
+.error-message {
+  color: var(--danger-color);
+  background-color: #fee2e2;
+  padding: 10px;
+  border-radius: 4px;
+  margin-bottom: 15px;
+  border: 1px solid var(--danger-color);
+}
+
+
+
+
+/* Add these styles to your existing CSS file */
+
+.sort-section {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  background-color: white;
+  border-radius: 8px;
+  padding: 15px 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.sort-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.sort-group label {
+  font-weight: 500;
+}
+
+.sort-group select {
+  padding: 8px 10px;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.sort-direction-btn {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 8px 12px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.sort-direction-btn:hover {
+  background-color: #3a5bd9;
+}
