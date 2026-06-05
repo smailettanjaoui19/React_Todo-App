@@ -1,0 +1,9 @@
+[1;34md[33mr[31mw[32mx[0m[33mr[1;90m-[0m[32mx[33mr[1;90m-[0m[32mx[0m    [1;90m-[0m [1;33mhex0r[0m [34m 5 Jun 21:42[0m [1;34msrc[0m
+.[1;33mr[31mw[90m-[0m[33mr[1;90m--[0m[33mr[1;90m--[0m    [32m0[0m [1;33mhex0r[0m [34m 5 Jun 21:43[0m added_file.txt
+.[1;33mr[31mw[90m-[0m[33mr[1;90m--[0m[33mr[1;90m--[0m  [32m763[0m [1;33mhex0r[0m [34m 5 Jun 21:42[0m [1;33meslint.config.js[0m
+.[1;33mr[31mw[90m-[0m[33mr[1;90m--[0m[33mr[1;90m--[0m  [32m416[0m [1;33mhex0r[0m [34m 5 Jun 21:42[0m index.html
+.[1;33mr[31mw[90m-[0m[33mr[1;90m--[0m[33mr[1;90m--[0m [1;32m115k[0m [1;33mhex0r[0m [34m 5 Jun 21:42[0m package-lock.json
+.[1;33mr[31mw[90m-[0m[33mr[1;90m--[0m[33mr[1;90m--[0m  [32m677[0m [1;33mhex0r[0m [34m 5 Jun 21:42[0m [1;4;33mpackage.json[0m
+.[1;33mr[31mw[90m-[0m[33mr[1;90m--[0m[33mr[1;90m--[0m [1;32m1.2k[0m [1;33mhex0r[0m [34m 5 Jun 21:42[0m [1;4;33mREADME.md[0m
+.[1;33mr[31mw[90m-[0m[33mr[1;90m--[0m[33mr[1;90m--[0m  [32m228[0m [1;33mhex0r[0m [34m 5 Jun 21:42[0m [1;33mtailwind.config.js[0m
+.[1;33mr[31mw[90m-[0m[33mr[1;90m--[0m[33mr[1;90m--[0m  [32m224[0m [1;33mhex0r[0m [34m 5 Jun 21:42[0m [1;33mvite.config.js[0m
